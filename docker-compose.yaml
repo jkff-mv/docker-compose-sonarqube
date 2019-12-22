@@ -3,7 +3,7 @@ version: '3'
 services:
   sonarqube-server:
     container_name: sonarqube-server
-    image: sonarqube:7.9.1-community
+    image: sonarqube:7.9.2-community
     restart: always
     environment:
       - sonar.jdbc.url=jdbc:postgresql://sonarqube-db:5432/sonar
