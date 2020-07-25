@@ -1,6 +1,6 @@
 # SonarQube over HTTPS on Docker Compose
 [![sonarqube version](https://img.shields.io/badge/SonarQube-8.2-blue)](https://www.sonarqube.org/)
-[![license](https://img.shields.io/badge/license-MIT%20License-lightgrey.svg)](https://github.com/jkff-mv/cloud-build-badge/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT%20License-lightgrey.svg)](https://github.com/jkff-mv/docker-compose-sonarqube/blob/master/LICENSE)
 
 ## Overview
 HTTPSで通信できるSonarQubeを立ち上げるためのDocker Composeの設定です。  
@@ -41,7 +41,7 @@ $ docker-compose up -d
 
 ### Customize Nginx
 リバースプロキシとして [Nginx](https://nginx.org/en/) を使用しています。  
-設定の調整が必要な場合は `nginx/custom.conf` を編集してください。  
+設定の調整が必要な際は `nginx/custom.conf` を編集してください。  
 
 ### Upgrade SonarQube
 [公式ドキュメント](https://docs.sonarqube.org/latest/setup/upgrading/) の指示に従ってください。  
