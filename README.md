@@ -1,10 +1,12 @@
 # SonarQube over HTTPS on Docker Compose
+[![sonarqube version](https://img.shields.io/badge/SonarQube-8.2-blue)](https://www.sonarqube.org/)
+[![license](https://img.shields.io/badge/license-MIT%20License-lightgrey.svg)](https://github.com/jkff-mv/docker-compose-sonarqube/blob/master/LICENSE)
 
 ## Overview
-HTTPSで通信できるSonarQubeを立ち上げるための、Docker Composeの設定です。  
+HTTPSで通信できるSonarQubeを立ち上げるためのDocker Composeの設定です。  
 
 ## What is SonarQube?
-[SonarQube](https://www.sonarqube.org/)は、オープンソースのコード品質管理ツールです。  
+[SonarQube](https://www.sonarqube.org/) はオープンソースのコード品質管理ツールです。  
 コードの重複を検出したり、複雑度を計測したり、バグや脆弱性の存在を指摘してくれます。  
 
 ## Requirement
@@ -18,7 +20,7 @@ HTTPSで通信できるSonarQubeを立ち上げるための、Docker Composeの�
 ## Usage
 
 ### Setup
-ホストのドメイン名や、Let's Encryptの利用に必要なメールアドレスを、`.env`に設定します。  
+ホストのドメイン名や [Let's Encrypt](https://letsencrypt.org/) の利用に必要なメールアドレスを `.env` に設定します。  
 
 ```
 SONARQUBE_DOMAIN=your.sonarqube.domain.jp
@@ -26,14 +28,23 @@ LETSENCRYPT_EMAIL=your.email.address@gmail.com
 ```
 
 ### Start up SonarQube!
-プロジェクトのルートに移動し、下記コマンドを実行します。  
+プロジェクトのルートに移動し下記コマンドを実行します。  
 
 ```
 $ docker-compose up -d
 ```
 
-`https://your.sonarqube.domain.jp/`から、SonarQubeにアクセスできます。:whale::sparkles::sparkles:  
-なお、デフォルトのユーザIDとパスワードは、`admin/admin`です。  
+`https://your.sonarqube.domain.jp/` からSonarQubeにアクセスできます。 :whale::sparkles::sparkles:  
+なお、デフォルトのユーザIDとパスワードは `admin/admin` です。  
+
+## Note
+
+### Customize Nginx
+リバースプロキシとして [Nginx](https://nginx.org/en/) を使用しています。  
+設定の調整が必要な際は `nginx/custom.conf` を編集してください。  
+
+### Upgrade SonarQube
+[公式ドキュメント](https://docs.sonarqube.org/latest/setup/upgrading/) の指示に従ってください。  
 
 ## Reference
 下記のイメージを使用しています。  
