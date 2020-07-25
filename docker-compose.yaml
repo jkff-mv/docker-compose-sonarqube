@@ -1,8 +1,8 @@
-version: '3'
+version: "3"
 
 services:
-  sonarqube-server:
-    container_name: sonarqube-server
+  sonarqube-web:
+    container_name: sonarqube-web
     image: sonarqube:8.2-community
     restart: always
     environment:
@@ -43,8 +43,8 @@ services:
     image: jwilder/nginx-proxy:latest
     restart: always
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - nginx-certs:/etc/nginx/certs:ro
@@ -52,7 +52,7 @@ services:
       - nginx-html:/usr/share/nginx/html
       - ${PWD}/nginx/custom.conf:/etc/nginx/conf.d/custom.conf:ro
     depends_on:
-      - sonarqube-server
+      - sonarqube-web
     networks:
       - sonarqube
 
