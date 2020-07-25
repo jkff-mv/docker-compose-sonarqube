@@ -39,6 +39,10 @@ $ docker-compose up -d
 
 ## Note
 
+### Customize Nginx
+リバースプロキシとして [Nginx](https://nginx.org/en/) を使用しています。  
+設定の調整が必要な場合は `nginx/custom.conf` を編集してください。  
+
 ### Upgrade SonarQube
 [公式ドキュメント](https://docs.sonarqube.org/latest/setup/upgrading/) の指示に従ってください。  
 
