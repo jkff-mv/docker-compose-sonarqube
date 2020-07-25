@@ -1,4 +1,6 @@
 # SonarQube over HTTPS on Docker Compose
+[![sonarqube version](https://img.shields.io/badge/SonarQube-8.2-blue)](https://www.sonarqube.org/)
+[![license](https://img.shields.io/badge/license-MIT%20License-lightgrey.svg)](https://github.com/jkff-mv/cloud-build-badge/blob/master/LICENSE)
 
 ## Overview
 HTTPSで通信できるSonarQubeを立ち上げるためのDocker Composeの設定です。  
